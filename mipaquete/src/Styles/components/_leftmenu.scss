@@ -1,0 +1,22 @@
+#left-side-menu.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.left-side-menu-card {
+    margin: 20px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.left-side-menu-card .container-img__left-side-menu-card {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}

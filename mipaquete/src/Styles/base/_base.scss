@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 20px;
+    color: #353a3d;
+    font-weight: unset;
+}
+
+h1.italic {
+    font-family: 'Ubuntu Medium Italic', arial;
+    letter-spacing: .5px;
+}
+
+p {
+    font-family: "Heebo-Regular";
+    color: #707b84;
+    font-size: 14px;
+}
+
+#background-app {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #e6eff5 !important;
+    z-index: -2;
+}
+
+.background-app.figure__background-app {
+    border-bottom-right-radius: 50px;
+    background-color: #ff9c19;
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+    -webkit-transform: rotate(
+6deg
+);
+    transform: rotate(
+6deg
+);
+    z-index: -1;
+}
+
+.background-app.desktop-mode.bottom-rigth.figure__background-app {
+    margin-left: 50%;
+    margin-top: 25%;
+}
+
+.background-app.bottom-rigth.figure__background-app {
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 50px;
+}

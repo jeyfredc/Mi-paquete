@@ -1,0 +1,108 @@
+@import '../base/base';
+
+#background__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 110;
+}
+
+#button__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    z-index: 130;
+    left: 1030px;
+}
+
+#button__menu.desktop-mode {
+    height: 100px;
+    width: 350px;
+}
+
+#button__menu.desktop-mode #background__button__menu {
+    border-bottom-left-radius: 30px;
+    height: 100%;
+    top: 0;
+    -webkit-transform: rotate(
+-5deg
+);
+    transform: rotate(
+-5deg
+);
+}
+
+#button__menu #background__button__menu {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 10px);
+    top: -10px;
+    border-bottom-left-radius: 14px;
+    background-color: #fff;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: rotate(
+-6deg
+);
+    transform: rotate(
+-6deg
+);
+    cursor: pointer;
+    transition: all .8s cubic-bezier(.4,-.92,.64,1.88)!important;
+   // box-shadow: 0 0 12px -4px rgb(0 0 0 / 25%);
+    z-index: 131;
+}
+
+#button__menu.desktop-mode #content__button__menu {
+    height: 70%;
+}
+
+#button__menu #content__button__menu {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 132;
+}
+
+#button__menu #content__button__menu .container-user-data__content__button__menu {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.to-login.login {
+    font-family: 'Ubuntu Medium Italic', arial;
+    color: #f08700!important;
+    font-style: oblique;
+    font-weight: bold;
+
+}
+
+.to-login.create {
+    color: #fff!important;
+    background: transparent linear-gradient(
+114deg
+,#009af0,#1483c1) 0 0 no-repeat padding-box;
+    border-radius: 20px;
+    padding: 4px 10px;
+    display: block;
+    margin-left: 20px!important;
+}

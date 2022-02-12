@@ -1,0 +1,57 @@
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip__content-overlay.bottom-rigth {
+    bottom: 0;
+    right: 0;
+}
+
+.tooltip .tooltip__content-overlay:hover, .tooltip:hover>.tooltip__content-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip__content-overlay {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 12px 12px -4px #6c98b580;
+}
+
+.tooltip__content-overlay .tooltip__title {
+    font-family: 'Ubuntu Medium Italic', arial;
+    font-size: 16px;
+    color: #353a3d;
+}
+
+.tooltip .tooltip__content-overlay .tooltip__text {
+    font-family: "Heebo-Regular";
+    font-size: 14px;
+    color: #707b84;
+    margin-top: 10px;
+}
+
+.tooltip .tooltip__content-overlay {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 12px 12px -4px #6c98b580;
+}
