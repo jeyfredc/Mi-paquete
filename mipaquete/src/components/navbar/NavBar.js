@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.svg";
+import home from "../../assets/home.svg";
+
 import { Form } from "../form/Form";
 
 export const NavBar = () => {
@@ -16,9 +18,15 @@ export const NavBar = () => {
         </ul>
       </div>
       <div>
-      <Form />
+        <div class="mobile-mode">
+        <img class="icon-home visible"
+        src={home} alt=""/>
+          <div id="content-section" class="visible">
+            <h1>Registro</h1>
+          </div>
+        </div>
+        <Form />
       </div>
     </div>
-          
   );
 };

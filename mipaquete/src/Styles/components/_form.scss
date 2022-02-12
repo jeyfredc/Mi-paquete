@@ -173,7 +173,7 @@
     width: 100%;
     height: auto;
     font-size: 14px;
-    font-family: "HeeboRegular" !important;
+    font-family: 'Heebo', sans-serif !important;
     color: #e42107 !important;
 
 
@@ -187,7 +187,7 @@
     width: 100%;
     height: auto;
     font-size: 14px;
-    font-family: "HeeboRegular";
+    font-family: $fontFamilyHeebo;
     color: #516575;
 }
 
@@ -217,7 +217,7 @@
     width: 100%;
     height: auto;
     font-size: 14px;
-    font-family: "HeeboRegular";
+    font-family: $fontFamilyHeebo;
     color: #516575;
 }
 
@@ -246,16 +246,11 @@
 }
 
 .body__steps-create-account .container-buttons__steps-create-account.desktop-mode {
-    width: 100%;
+    width: 70%;
     flex-direction: row-reverse;
 }
 
-.body__steps-create-account .container-buttons__steps-create-account {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
+
 
 .body__steps-create-account .container-buttons__steps-create-account.desktop-mode button {
     width: 100%;
@@ -269,17 +264,12 @@
     font-size: 16px;
     border: none;
     outline: none;
-    font-family: "HeeboRegular";
+    font-family: $fontFamilyHeebo;
     color: #707b84;
 }
 
 #step-one-create-account.desktop-mode .body__steps-create-account .container-buttons__steps-create-account {
     min-height: 70px;
-}
-
-.body__steps-create-account .container-buttons__steps-create-account.desktop-mode {
-    width: 100%;
-    flex-direction: row-reverse;
 }
 
 .body__steps-create-account .container-buttons__steps-create-account {
@@ -289,6 +279,7 @@
     justify-content: space-evenly;
     position: initial;
     margin-bottom: 4%;
+    margin-right: 3%;
 }
 
 .body__steps-create-account .container-buttons__steps-create-account.desktop-mode button {
@@ -322,10 +313,15 @@ a, button {
     justify-content: center;
     width: 100%;
     font-size: 16px;
-    font-family: "Ubuntu-MediumItalic";
+    font-family: $fontFamilyUbuntu;
     box-sizing: border-box;
     text-decoration: none;
     cursor: pointer;
+}
+
+.span__input-general{
+    font-family: $fontFamilyHeebo;
+    color: #707b84;
 }
 
 .body__steps-create-account .container-buttons__steps-create-account.desktop-mode button {
@@ -339,7 +335,7 @@ a, button {
 }
 
 a.button-secondary, button.button-secondary {
-    height: 40px;
+    height: 50px;
     min-height: 40px;
     border-radius: 20px;
     color: #ff9c19;
@@ -363,4 +359,89 @@ a.button-secondary, button.button-secondary {
     z-index: -1;
     margin-left: -46%;
     margin-top: 50%;
+}
+
+@media screen and (max-width: $small) {
+
+    #step-one-create-account.desktop-mode {
+        width: 900px;
+        max-height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+        height: 90vh;
+        top: 3%;
+        left: -3%;
+        overflow-y: scroll;
+    }
+
+    .body__steps-create-account {
+        width: 100%;
+        padding-top: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        top: 5%;
+    }
+
+    .body__steps-create-account .container__body__steps-create-account .container-top-bottom-or-side__steps-create-account {
+        display: block;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .body__steps-create-account .container-buttons__steps-create-account {
+        width: 100%;
+        display: block;
+        align-items: center;
+        justify-content: space-evenly;
+        position: initial;
+
+    }
+
+    .body__steps-create-account .container-buttons__steps-create-account.desktop-mode button {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 4%;
+    }
+
+    .header__steps-create-account {
+        width: 108%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .header__steps-create-account .all-left .left, .header__steps-create-account .all-left .rigth {
+        width: 80px;
+    display: flex;
+    align-items: center;
+    height: 134%;
+    text-align: center;
+    margin-top: 5%;
+    
+    }
+    
+    .figure__background-app{
+        width: 100%; 
+        height: 52%;
+        border-bottom-right-radius: 50px;
+        background-color: #ff9c19;
+        -webkit-transform-origin: top right;
+        transform-origin: top right;
+        -webkit-transform: rotate(
+        6deg
+        );
+        transform: rotate(
+    188deg
+    );
+    z-index: -1;
+    margin-left: -100%;
+    margin-top: 208%;
+    }
 }

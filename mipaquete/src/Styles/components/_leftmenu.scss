@@ -20,3 +20,40 @@
     width: 40px;
     margin-right: 10px;
 }
+
+#support-button-desktop.displayed {
+    width: auto;
+}
+
+#support-button-desktop {
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 16px 12px -10px #6c98b580;
+    z-index: 110;
+}
+
+#support-button-desktop span {
+    // width: 0;
+    overflow: hidden;
+    font-family: $fontFamilyUbuntu;
+    font-size: 18px;
+    color: #353a3d;
+    margin: 0;
+}
+
+@media screen and (max-width: $small) {
+    #support-button-desktop.displayed{
+        visibility: hidden;
+    }
+}

@@ -20,9 +20,49 @@
 }
 
 .desktop-mode ul li {
-    font-family: 'Ubuntu Medium Italic', arial;
+    font-family: $fontFamilyUbuntu;
     font-size: 18px;
     color: #353a3d;
     margin: 0 10px;
     cursor: pointer;
 }
+
+
+
+
+    
+@media screen and (max-width: $small) {
+    #logo , #header {
+        content-visibility: hidden ;
+    }
+    .mobile-mode {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        padding: 0 20px 0 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-left: 5%;
+        font-family: $fontFamilyUbuntu;
+    
+    }
+    .icon-home.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .icon-home {
+        position: fixed;
+        top: 20px;
+        right: 110px;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+  

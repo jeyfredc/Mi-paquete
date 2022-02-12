@@ -1,16 +1,19 @@
 import React from "react";
-import { Form } from "./components/form/Form";
-import { LeftMenu } from "./components/leftmenu/LeftMenu";
-import { ButtonMenu } from "./components/navbar/ButtonMenu";
-import { NavBar } from "./components/navbar/NavBar";
+import { BrowserRouter, Navigate , Route, Routes } from 'react-router-dom';
+import { Registro } from "./components/registro/Registro";
+
 
 export const MiPaqueteApp = () => {
+
   return (
-    <div id="background-app">
-      <div className="figure__background-app"></div>
-      <ButtonMenu />
-      <NavBar />
-      <LeftMenu />
-    </div>
+<BrowserRouter>
+  <Routes>
+    <Route path="/registro" element={<Registro />} />
+   <Route
+        path="/"
+        element={<Navigate replace to="/registro" />}
+    />
+  </Routes>
+</BrowserRouter>
   );
 };

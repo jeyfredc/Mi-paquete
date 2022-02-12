@@ -29,13 +29,13 @@
 }
 
 .tooltip__content-overlay .tooltip__title {
-    font-family: 'Ubuntu Medium Italic', arial;
+    font-family: $fontFamilyUbuntu;
     font-size: 16px;
     color: #353a3d;
 }
 
 .tooltip .tooltip__content-overlay .tooltip__text {
-    font-family: "Heebo-Regular";
+    font-family: $fontFamilyHeebo;
     font-size: 14px;
     color: #707b84;
     margin-top: 10px;
