@@ -18,10 +18,10 @@ export const NavBar = () => {
         </ul>
       </div>
       <div>
-        <div class="mobile-mode">
-        <img class="icon-home visible"
+        <div className="mobile-mode">
+        <img className="icon-home visible"
         src={home} alt=""/>
-          <div id="content-section" class="visible">
+          <div id="content-section" className="visible">
             <h1>Registro</h1>
           </div>
         </div>

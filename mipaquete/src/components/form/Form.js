@@ -1,29 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import arrowbackorange from "../../assets/arrow_back-orange.svg";
 import colombia from "../../assets/colombia.svg";
 import whatsapp from "../../assets/whatsapp.svg";
+import FormPage2 from "./FormPage2";
+import { HeaderForm } from "./HeaderForm";
 
 export const Form = () => {
+
+  const [datosForm, setDatosForm] = useState({
+    nombre: "",
+    apellido: "",
+    correo: "",
+    celular: "",
+    ciudad: "",
+    direccion: "",
+    tipo_documento:"",
+    nro_identificacion:"",
+    tipo_persona:"",
+    nombre_comercial:"",
+    rango_envios:"",
+  });
+
+  const [hiden, setHiden] = useState(false)
+
+  const handleInputChange = (e) => {
+    setDatosForm({
+      ...datosForm,
+      [e.target.name] : e.target.value
+    })
+
+  }
+
+  const cleanForm = () => {
+    setDatosForm({
+      nombre: "",
+      apellido: "",
+      correo: "",
+      celular: "",
+      ciudad: "",
+      direccion: "",
+      tipo_documento:"",
+      nro_identificacion:"",
+      tipo_persona:"",
+      nombre_comercial:"",
+      rango_envios:"",
+    })
+  }
+
+
+  const continueForm = () => {
+
+    setHiden(true)
+  } 
+
+  console.log(datosForm)
+
   return (
     <div className="container-section-desktop full-width">
       <div id="container-create-account__desktop-mode">
         <div id="create-account" className="desktop-mode">
+          {!hiden ? (
           <div id="step-one-create-account" className="desktop-mode">
-            <div className="header__steps-create-account">
-              <div className="all-left">
-                <div className="left left-arrow-mobile-mode">
-                  <img src={arrowbackorange} alt="atras" />
-                </div>
-                <div className="center">
-                  <h1 className="italic ">Diligencia tus datos</h1>
-                </div>
-              </div>
-              <div className="rigth">
-                <p className="required_text">
-                  Todos los campos son obligatorios
-                </p>
-              </div>
-            </div>
+            <HeaderForm/>
             <div className="body__steps-create-account desktop-mode">
               <div className="second-body__steps-create-account">
                 <div className="container__body__steps-create-account">
@@ -34,11 +72,13 @@ export const Form = () => {
                       <div className="container__input-general">
                         <div className="content-top__input-general">
                           <input
+                            name="nombre"
                             className="input-general"
                             accept=""
                             type="text"
                             placeholder="Daniela"
-                            value=""
+                            value={datosForm.nombre}
+                            onChange={handleInputChange}
                           />
                         </div>
                         <hr className="help-to-line" />
@@ -58,11 +98,14 @@ export const Form = () => {
                       <div className="container__input-general">
                         <div className="content-top__input-general">
                           <input
+                            name="apellido"
                             className="input-general"
                             accept=""
                             type="text"
                             placeholder="Mantilla"
-                            value=""
+                            value={datosForm.apellido}
+                            onChange={handleInputChange}
+
                           />
                         </div>
                         <hr className="help-to-line" />
@@ -86,11 +129,14 @@ export const Form = () => {
                       <div className="container__input-general">
                         <div className="content-top__input-general">
                           <input
+                            name="correo"
                             className="input-general"
                             accept=""
                             type="text"
                             placeholder="Dani.Mantilla@mipaquete.com"
-                            value=""
+                            value={datosForm.correo}
+                            onChange={handleInputChange}
+
                           />
                         </div>
                         <hr className="help-to-line" />
@@ -109,21 +155,24 @@ export const Form = () => {
                       <label />
                       <div className="container__input-general">
                         <div className="content-top__input-general">
-                          <img src={colombia} alt="" class=" " />
+                          <img src={colombia} alt="" className=" " />
                           <input
+                            name="celular"
                             className="input-general"
                             accept=""
                             type="text"
                             placeholder="  3101234567"
-                            value=""
+                            value={datosForm.celular}
+                            onChange={handleInputChange}
+
                           />
-                          <div class="tooltip">
+                          <div className="tooltip">
                             <img src={whatsapp} alt="icon tooltip" />
-                            <div class="tooltip__content-overlay bottom-rigth">
-                              <span class="tooltip__title value">
+                            <div className="tooltip__content-overlay bottom-rigth">
+                              <span className="tooltip__title value">
                                 Notificaciones Whatsapp
                               </span>
-                              <span class="tooltip__text value">
+                              <span className="tooltip__text value">
                                 Por whatsapp podrías recibir notificaciones para
                                 facilitar tu proceso de envíos.
                               </span>
@@ -149,11 +198,14 @@ export const Form = () => {
                       <div className="container__input-general">
                         <div className="content-top__input-general">
                           <input
+                            name="ciudad"
                             className="input-general"
                             accept=""
                             type="text"
                             placeholder="MEDELLÍN"
-                            value=""
+                            value={datosForm.ciudad}
+                            onChange={handleInputChange}
+
                           />
                         </div>
                         <hr className="help-to-line" />
@@ -175,11 +227,14 @@ export const Form = () => {
                       <div className="container__input-general">
                         <div className="content-top__input-general">
                           <input
+                            name="direccion"
                             className="input-general"
                             accept=""
                             type="text"
                             placeholder="Carrera 25 A # 23 - 18"
-                            value=""
+                            value={datosForm.direccion}
+                            onChange={handleInputChange}
+
                           />
                         </div>
                         <hr className="help-to-line" />
@@ -205,19 +260,30 @@ export const Form = () => {
                 </div>
               </div>
               <div className="container-buttons__steps-create-account desktop-mode">
-                <button id="" className="button-primary   normal" type="button">
+                <button 
+                id="" 
+                className="button-primary   normal" 
+                type="button"
+                onClick={continueForm}
+                >
                   Continuar
                 </button>
                 <button
                   id=""
                   className="button-secondary   normal"
                   type="button"
+                  onClick={cleanForm}
                 >
                   Cancelar
                 </button>
               </div>
             </div>
           </div>
+          ): 
+            <FormPage2 
+            datosForm={datosForm}
+            handleInputChange={handleInputChange}/>
+          }
         </div>
       </div>
     </div>

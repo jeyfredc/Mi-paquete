@@ -35,7 +35,7 @@
     padding: 20px;
     box-sizing: border-box;
     position: relative;
-    height: 80vh;
+    height: 85vh;
     top: 6%;
     left: -3%;
     overflow-y: scroll;
@@ -164,6 +164,108 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 10px 0;
+}
+
+.containerSelect {
+    width: 166%;
+    /* opacity: 1; */
+    padding: 4px 0 4px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 2px solid #ff9c19;
+    background: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: $fontFamilyHeebo;
+}
+
+.containerSelect_two{
+    width: 80%;
+    height: 10vh;
+    /* opacity: 1; */
+    padding: 4px 0 4px 6px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    /* box-sizing: border-box; */
+    border: 2px solid #ff9c19;
+    background: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: $fontFamilyHeebo;
+}
+
+.swal2-container.swal2-center>.swal2-popup {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+}
+
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: #4dae16;
+    color: #fff;
+    font-size: 1em;
+}
+
+.swal2-styled.swal2-cancel {
+    border: 0;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: red;
+    color: #fff;
+    font-size: 1em;
+}
+
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.radio-button input {
+    margin: 4px 15px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.radio-button span {
+    font-size: 14px;
+    color: #707b84;
+}
+
+.radio-button span, .radio-button span.checked {
+    font-family: $fontFamilyHeebo;
+}
+
+.span__input-general_field {
+    font-family: $fontFamilyHeebo;
+    color: #353a3d;
+}
+
+.annotation__radio-button-general {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    font-family: $fontFamilyHeebo;
+    color: #353a3d;
+    margin-top: 2px;
+}
+
+.annotation__radio-button-general.error {
+    font-size: 0;
+    color: #f00000;
 }
 
 .container__input-all, .container__input-all * {
